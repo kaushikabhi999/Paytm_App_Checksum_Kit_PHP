@@ -134,7 +134,7 @@ function getArray2StrForVerify($arrayList) {
 }
 
 function redirect2PG($paramList, $key) {
-	$hashString = getchecksumFromArray($paramList);
+	$hashString = getchecksumFromArray($paramList, PAYTM_MERCHANT_KEY);
 	$checksum = encrypt_e($hashString, $key);
 }
 
